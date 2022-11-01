@@ -14,17 +14,23 @@
         <div class="container">
             <div class="row form-group">
                 <label asp-for="SaleAmount" class="col-sm-3">Sale Amount</label>
-                <input asp-for="SaleAmount"/>
+                <div class="col-sm-3">
+                    <input asp-for="SaleAmount" class="form-control" />
+                </div>  
             </div>
 
             <div class="row form-group">
                 <label asp-for="TaxRate" class="col-sm-3">Tax Rate</label>
-                <input asp-for="TaxRate" />
+                <div class="col-sm-3">
+                    <input asp-for="TaxRate" class="form-control"/>
+                </div>
             </div>
 
             <div class="row form-group">
                 <label class="col-sm-3">Tax Amount</label>
-                <input value=@ViewBag.TaxAmount.ToString("C2") readonly/>
+                <div class="col-sm-3">
+                    <input value=@ViewBag.TaxAmount.ToString("C2") readonly class="form-control"/>
+                </div>
             </div>
 
             <div class="row form-group">
@@ -32,7 +38,7 @@
                 <input value=@ViewBag.TotalSalePrice.ToString("C2") readonly />
             </div>
 
-            <button type="submit">Calculate Tax</button>
-            <a asp-action="index">Clear</a>
+            <button type="submit" class="btn-primary p-2 m-5">Calculate Tax</button>
+            <a asp-action="index" class="btn btn-outline-secondary p-2">Clear</a>
         </div>
     </form>

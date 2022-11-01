@@ -10,7 +10,7 @@ h1 {
 
 label {
     display: inline-block;
-    widht: 10em;    /*error syntax and spelling, should be width and not widht*/ 
+    width: 10em;    /*error syntax and spelling, should be width and not widht*/ 
     padding-right: 1em;
 }
 

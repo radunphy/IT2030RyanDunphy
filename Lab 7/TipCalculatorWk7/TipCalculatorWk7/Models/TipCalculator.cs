@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+// Ryan Dunphy Lab 7
 namespace TipCalculatorWk7.Models
 {
    public class TipCalculator
@@ -12,7 +12,8 @@ namespace TipCalculatorWk7.Models
       {
          if (MealCost.HasValue)
          {
-            var tip = MealCost.Value / percent;
+            // Program was using division instead of multiplication. Since this is a percent, it needs to be multiplied. 
+            var tip = (MealCost.Value * percent);
                 return tip;                          
          }
          else

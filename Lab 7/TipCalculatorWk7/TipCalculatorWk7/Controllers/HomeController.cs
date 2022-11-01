@@ -18,8 +18,10 @@ namespace TipCalculatorWk7.Controllers
       {
          ViewBag.Fifteen = 0;
          ViewBag.Twenty = 0;
-         Viewbag.TwentyFive = 0;  
-         View();                  
+         // Currently shows Viewbag which is incorrect. ViewBag is the correct syntax. 
+         ViewBag.TwentyFive = 0;  
+        // Added return keeyword to View();   
+        return View();
 
       }
 

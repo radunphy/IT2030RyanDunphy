@@ -9,14 +9,15 @@
  *@ </div>
 
     <form asp-action="Index" method="post">
-        <div asp-validation-summary="All"></div>
+        <!-- <div asp-validation-summary="All"></div> -->
 
         <div class="container">
             <div class="row form-group">
                 <label asp-for="SaleAmount" class="col-sm-3">Sale Amount</label>
                 <div class="col-sm-3">
                     <input asp-for="SaleAmount" class="form-control" />
-                </div>  
+                </div>
+                <span asp-validation-for="SaleAmount" class="col text-danger"></span>
             </div>
 
             <div class="row form-group">
@@ -24,6 +25,7 @@
                 <div class="col-sm-3">
                     <input asp-for="TaxRate" class="form-control"/>
                 </div>
+                <span asp-validation-for="TaxRate" class="col text-danger"></span>
             </div>
 
             <div class="row form-group">
@@ -35,7 +37,9 @@
 
             <div class="row form-group">
                 <label class="col-sm-3">Total Sale Price</label>
-                <input value=@ViewBag.TotalSalePrice.ToString("C2") readonly />
+                <div class="col-sm-3">
+                    <input value=@ViewBag.TotalSalePrice.ToString("C2") readonly class="form-control"/>
+                </div>
             </div>
 
             <button type="submit" class="btn-primary p-2 m-5">Calculate Tax</button>

@@ -25,3 +25,7 @@ footer {
     padding: 1em;
     text-align: center;
 }
+
+.jumbotron {
+    background-image: url('~/lib/images/Example.png');
+}

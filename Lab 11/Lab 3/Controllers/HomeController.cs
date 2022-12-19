@@ -14,10 +14,26 @@ namespace Lab_3.Controllers
         }
 
         [HttpGet]
+
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Tools()
         {
             ViewBag.TaxAmount = 0;
             ViewBag.TotalSalePrice = 0;
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
             return View();
         }
 
@@ -36,15 +52,6 @@ namespace Lab_3.Controllers
                 ViewBag.TotalSalePrice = 0;
             }
             return View(productSale);
-        }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult FAQ()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

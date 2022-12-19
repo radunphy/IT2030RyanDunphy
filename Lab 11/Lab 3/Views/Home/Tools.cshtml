@@ -1,0 +1,48 @@
+﻿@model Sale
+@{
+    ViewData["Title"] = "Ryan's Rapid Sports";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Ryan's Rapid Sports!'</h1>
+ @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+ *@ </div>
+
+    <form asp-action="Index" method="post">
+        <!-- <div asp-validation-summary="All"></div> -->
+
+        <div class="container">
+            <div class="row form-group">
+                <label asp-for="SaleAmount" class="col-sm-3">Sale Amount</label>
+                <div class="col-sm-3">
+                    <input asp-for="SaleAmount" class="form-control" />
+                </div>
+                <span asp-validation-for="SaleAmount" class="col text-danger"></span>
+            </div>
+
+            <div class="row form-group">
+                <label asp-for="TaxRate" class="col-sm-3">Tax Rate</label>
+                <div class="col-sm-3">
+                    <input asp-for="TaxRate" class="form-control"/>
+                </div>
+                <span asp-validation-for="TaxRate" class="col text-danger"></span>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-3">Tax Amount</label>
+                <div class="col-sm-3">
+                    <input value=@ViewBag.TaxAmount.ToString("C2") readonly class="form-control"/>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-3">Total Sale Price</label>
+                <div class="col-sm-3">
+                    <input value=@ViewBag.TotalSalePrice.ToString("C2") readonly class="form-control"/>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary p-2 m-5">Calculate Tax</button>
+            <a asp-action="Tools" class="btn btn-outline-secondary p-2">Clear</a>
+        </div>
+    </form>

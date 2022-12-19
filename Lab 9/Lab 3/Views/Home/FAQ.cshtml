@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "FAQ";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="accordion" id="faq">
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <strong>Why did you start this?</strong>
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq">
+            <div class="accordion-body">
+                <p>I have a passion for sports and programming, so I began to make this as a part of my business plan.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <strong>What's your favorite programming language?</strong>
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#faq">
+            <div class="accordion-body">
+                <p>C#, as it is a practical language for modern websites and ASP.NET applications use it.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,14 +1,25 @@
 ﻿@model Sale
 @{
-    ViewData["Title"] = "Ryan's Rapid Sports";
+    ViewData["Title"] = "Tools";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Ryan's Rapid Sports!'</h1>
  @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
  *@ </div>
+ 
+<div class="p-1">
+    <div class="p-1">
+        Session state values are:
+    </div>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item pe-5 m-1">@Context.Session.GetString("Course")</li>
+        <li class="list-group-item pe-5 m-1">@Context.Session.GetString("StudentID")</li>
+        <li class="list-group-item pe-5 m-1">@Context.Session.GetInt32("CurrentDate")</li>
+    </ul>
+</div>
 
-    <form asp-action="Index" method="post">
+<form asp-action="Tools" method="post">
         <!-- <div asp-validation-summary="All"></div> -->
 
         <div class="container">

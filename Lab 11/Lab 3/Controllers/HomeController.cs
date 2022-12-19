@@ -20,13 +20,6 @@ namespace Lab_3.Controllers
             return View();
         }
 
-        public IActionResult Tools()
-        {
-            ViewBag.TaxAmount = 0;
-            ViewBag.TotalSalePrice = 0;
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();
@@ -37,9 +30,21 @@ namespace Lab_3.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Tools()
+        {
+            HttpContext.Session.SetString("Course", "IT2030");
+            HttpContext.Session.SetString("StudentID", "S01131630");
+            HttpContext.Session.SetInt32("CurrentDate", 202212018);
+
+            ViewBag.TaxAmount = 0;
+            ViewBag.TotalSalePrice = 0;
+            return View();
+        }
+
         [HttpPost]   
 
-        public IActionResult Index(Sale productSale)
+        public IActionResult Tools(Sale productSale)
         {
             if (ModelState.IsValid)
             {
